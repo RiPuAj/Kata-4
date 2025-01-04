@@ -23,8 +23,8 @@ public class SQLiteTitleWriter implements TitleWriter {
 
     private static final String insertStatement = "INSERT INTO movies VALUES(?,?,?,?,?,?)";
     private final String databaseUrl;
-    private Connection connection;
-    private PreparedStatement statement;
+    private final Connection connection;
+    private final PreparedStatement statement;
 
     public SQLiteTitleWriter(File file) throws SQLException {
         this.databaseUrl = "jdbc:sqlite:" + file.getAbsolutePath();
